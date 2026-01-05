@@ -1,7 +1,7 @@
 ---
 title: "Using Markdown"
-teaching: 10
-exercises: 2
+teaching: 10 # teaching time in minutes
+exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -20,7 +20,7 @@ exercises: 2
 ## Introduction
 
 This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
+[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
 [R Markdown][r-markdown] for dynamic files that can render code into output. 
 Please refer to the [Introduction to The Carpentries 
 Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
@@ -80,6 +80,18 @@ You can use standard markdown for static figures with the following syntax:
 accessibility purposes'}`
 
 ![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Callout sections can highlight information.
+
+They are sometimes used to emphasise particularly important points
+but are also used in some lessons to present "asides": 
+content that is not central to the narrative of the lesson,
+e.g. by providing the answer to a commonly-asked question.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Math
 
