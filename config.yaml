@@ -67,6 +67,11 @@ contact: 'triznam@si.edu' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- creating-using-web.md
+- issues-and-pull-requests.md
+- gh-desktop-changes.md
+- vscode-changes.md
+- websites.md
 
 # Information for Learners
 learners: 

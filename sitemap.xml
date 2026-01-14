@@ -16,6 +16,12 @@
     <loc>https://carpentries-incubator.github.io/github-without-command-line/citation.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/creating-using-web.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/gh-desktop-changes.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/images.html</loc>
   </url>
   <url>
@@ -37,6 +43,12 @@
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/citation.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/creating-using-web.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/gh-desktop-changes.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/images.html</loc>
   </url>
   <url>
@@ -49,6 +61,9 @@
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/introduction.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/issues-and-pull-requests.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/key-points.html</loc>
   </url>
   <url>
@@ -58,10 +73,19 @@
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/vscode-changes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor/websites.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/instructor-notes.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/issues-and-pull-requests.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/key-points.html</loc>
@@ -71,5 +95,11 @@
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/github-without-command-line/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/vscode-changes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/github-without-command-line/websites.html</loc>
   </url>
 </urlset>
