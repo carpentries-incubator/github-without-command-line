@@ -1,21 +1,21 @@
 ---
-title: "Introduction to Version Control"
+title: "Making changes with GitHub Desktop"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- Question 1
+- Question 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Objective 1
+- Objective 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction to Version Control
-
+## Making changes with GitHub Desktop
