@@ -254,7 +254,9 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#hosting-websites-on-github-pages">Hosting websites on GitHub Pages</a></li>
+        <ul><li><a href="#step-0-add-links-to-your-recipes-in-readme.md">Step 0: Add links to your recipes in README.md</a></li>
+<li><a href="#step-1-tell-github-to-make-your-pages">Step 1: Tell GitHub to make your pages</a></li>
+<li><a href="#step-2-watch-github-build-your-page-live">Step 2: Watch GitHub build your page live</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -319,7 +321,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Hosting websites on GitHub Pages</h1>
-        <p>Last updated on 2026-01-14 |
+        <p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/websites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -338,8 +340,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>Question 1</li>
-<li>Question 2</li>
+<ul><li>How do I serve a website using GitHub?</li>
 </ul></div>
 </div>
 </div>
@@ -347,18 +348,94 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Objective 1</li>
-<li>Objective 2</li>
+<ul><li>Enable GitHub Pages for a repository</li>
+<li>Watch GitHub build and deploy a page using GitHub Actions</li>
+<li>View the resulting website</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="hosting-websites-on-github-pages">Hosting websites on GitHub Pages<a class="anchor" aria-label="anchor" href="#hosting-websites-on-github-pages"></a></h2>
-<hr class="half-width"><!--
+<p>You can host your personal homepage or group webpage or project
+website on GitHub using <a href="https://pages.github.com/" class="external-link">GitHub
+Pages</a>.</p>
+<p><a href="https://about.gitlab.com/features/pages/" class="external-link">GitLab</a> and <a href="https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html" class="external-link">Bitbucket</a>
+also offer a very similar solution.</p>
+<p>Unless you need user authentication or a sophisticated database
+behind your website, <a href="https://pages.github.com/" class="external-link">GitHub
+Pages</a> can be a very nice alternative to running your own web
+servers.</p>
+<section><h2 class="section-heading" id="step-0-add-links-to-your-recipes-in-readme-md">Step 0: Add links to your recipes in README.md<a class="anchor" aria-label="anchor" href="#step-0-add-links-to-your-recipes-in-readme-md"></a></h2>
+<hr class="half-width"><p><em>(This is from Step 3 of <a href="gh-desktop-changes.html">Making
+changes with GitHub Desktop</a>, so you may have already done
+this)</em></p>
+<p>Go back to your initial recipes repository, and edit your README.md
+file so that you have links to your separate recipe markdown files.</p>
+<p>Here is sample text to include:</p>
+<pre><code># Avocado Recipes
+A collection of my avocado recipes
+
+* [Smoothie](avocado_smoothie.md)
+* [Guacamole](guacamole.md)
+* [Salad](avocado_tomato_salad.md)
+</code></pre>
+<p>Commit these changes.</p>
+</section><section><h2 class="section-heading" id="step-1-tell-github-to-make-your-pages">Step 1: Tell GitHub to make your pages<a class="anchor" aria-label="anchor" href="#step-1-tell-github-to-make-your-pages"></a></h2>
+<hr class="half-width"><p>We need to tell GitHub how to make your repository into a
+website.</p>
+<p>Click on the Settings gear icon up top, and then click on the Pages
+section on the left side panel.</p>
+<figure><img src="fig/settings_pages.jpg" alt="Screenshot showing the GitHub Settings Pages section" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Settings Page
+section</div>
+</figure><p>Click on the dropdown under Branch, and select “main” to tell GitHub
+to build a webpage from the “main” branch. Then make sure that “/root”
+is selected in the new dropdown that will populate. Click Save to make
+the web page build.</p>
+<figure><img src="fig/settings_main_root.jpg" alt="Screenshot showing the GitHub Pages settings with the main branch and root folder selected" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Settings Page
+section, with main branch and root selected</div>
+</figure></section><section><h2 class="section-heading" id="step-2-watch-github-build-your-page-live">Step 2: Watch GitHub build your page live<a class="anchor" aria-label="anchor" href="#step-2-watch-github-build-your-page-live"></a></h2>
+<hr class="half-width"><p>Right after clicking Save, GitHub will start building your page using
+GitHub Actions (we could do a whole extra workshop on GitHub
+Actions).</p>
+<p>Click on the Actions icon on the top menu to see that a “workflow”
+has been triggered called “pages build and deployment”.</p>
+<figure><img src="fig/github_actions_workflows.jpg" alt="Screenshot of the GitHub Actions page showing a pages build and deployment workflow that was just triggered" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Actions page
+with a deployment that has just been triggered</div>
+</figure><p>If you clicked on the Actions tab fast enough, the circle next to the
+workflow name should be brown or yellow.</p>
+<p>Click on the “pages build and deployment” link. If the build was
+successful, all parts of the workflow should show a green circle. And
+most importantly, the “deploy” portion should have a link to your new
+website!</p>
+<figure><img src="fig/github_actions_built.jpg" alt="Screenshot of a completed GitHub Actions workflow with a link to the deployed site" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing details of a GitHub Actions
+workflow</div>
+</figure><p>Click on that link (it should follow the pattern
+<code>https://[your username].github.io/recipes</code>). You should see
+a pretty basic webpage, but it’s completely built from the contents of
+your GitHub repository!</p>
+<figure><img src="fig/webpage.jpg" alt="Screenshot of a simple deployed webpage with links to recipes" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing a simple webpage with links
+to recipes</div>
+</figure><div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>GitHub Pages can turn the contents of a repository into a live
+website.</li>
+<li>Enabling Pages triggers a GitHub Actions workflow that builds and
+deploys the site.</li>
+<li>The deployed site’s URL follows the pattern
+<code>https://[your username].github.io/[repository name]</code>.</li>
+</ul></div>
+</div>
+</div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="vscode-changes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -388,7 +465,7 @@ any links that you are not going to use.
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/" class="external-link">Cite</a>
+        <a href="citation.html">Cite</a>
         | <a href="mailto:triznam@si.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -418,8 +495,8 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/github-without-command-line/websites.html",
   "identifier": "https://carpentries-incubator.github.io/github-without-command-line/websites.html",
   "dateCreated": "2026-01-05",
-  "dateModified": "2026-01-14",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-06",
+  "datePublished": "2026-07-06"
 }
 
   </script><script>

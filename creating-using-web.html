@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 17%" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">17%</div>
+    <div class="progress-bar incubator" role="progressbar" style="width: 7%" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">7%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -218,7 +218,10 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#creating-repositories-using-the-web-interface">Creating repositories using the web interface</a></li>
+        <ul><li><a href="#step-1-create-a-repository-with-a-readme-and-a-license">Step 1: Create a repository with a README and a license</a></li>
+<li><a href="#step-2-create-a-new-file">Step 2: Create a new file</a></li>
+<li><a href="#step-3-modify-a-file">Step 3: Modify a file</a></li>
+<li><a href="#markdown">Markdown</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -319,7 +322,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Creating repositories using the web interface</h1>
-        <p>Last updated on 2026-01-14 |
+        <p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/creating-using-web.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -338,8 +341,10 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>Question 1</li>
-<li>Question 2</li>
+<ul><li>How do I create a repository on GitHub?</li>
+<li>How do I record (commit) changes?</li>
+<li>How do I browse changes?</li>
+<li>What repository insights and settings are available?</li>
 </ul></div>
 </div>
 </div>
@@ -347,18 +352,160 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Objective 1</li>
-<li>Objective 2</li>
+<ul><li>Create a new repository using the GitHub web interface</li>
+<li>Create and edit files directly on GitHub</li>
+<li>Write clear, descriptive commit messages</li>
+<li>Browse a repository’s commit history</li>
+<li>Use Markdown to format text</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="creating-repositories-using-the-web-interface">Creating repositories using the web interface<a class="anchor" aria-label="anchor" href="#creating-repositories-using-the-web-interface"></a></h2>
-<hr class="half-width"><!--
+<p>We will practice creating a new repository using the web interface,
+committing changes to it, browsing the changes, creating branches, and
+more. This is everything you need to do basic file management, though
+you’ll probably want something faster to use. Still, it can be good for
+quick edits and contributions.</p>
+<section><h2 class="section-heading" id="step-1-create-a-repository-with-a-readme-and-a-license">Step 1: Create a repository with a README and a license<a class="anchor" aria-label="anchor" href="#step-1-create-a-repository-with-a-readme-and-a-license"></a></h2>
+<hr class="half-width"><p>You start off by creating a repository from the web. In fact, we
+usually end up doing this from the web, no matter how you do your daily
+work. The important questions are who is the <em>owner</em> and what is
+the <em>name</em> of the repository.</p>
+<p>Make sure that you are <strong>logged into GitHub</strong>.</p>
+<p>To create a repository we either click the green button “New” (top
+left corner):</p>
+<figure><img src="fig/new-top-left.png" alt="Screenshot of the GitHub interface highlighting the green New button in the top left corner" class="figure mx-auto d-block"><div class="figcaption">The green “New” button in the top left corner of
+GitHub</div>
+</figure><p>Or if you see your profile page, there is a “+” menu (top right
+corner):</p>
+<figure><img src="fig/new-top-right.png" alt="Screenshot of the GitHub interface highlighting the plus icon menu in the top right corner" class="figure mx-auto d-block"><div class="figcaption">The “+” menu in the top right corner of
+GitHub</div>
+</figure><p>We then land at the following form. Please fill it out and set
+<strong>Initialize this repository with a README</strong>. Leave “Choose
+a License” as “None” for now — we will cover choosing a license in a
+later episode.</p>
+<figure><img src="fig/form.png" alt="Screenshot of the GitHub new repository creation form" class="figure mx-auto d-block"><div class="figcaption">The GitHub new repository form</div>
+</figure><p>And now we have a repository with a README and LICENSE and one
+commit:</p>
+<figure><img src="fig/created.png" alt="Screenshot of a newly created GitHub repository showing the README and one commit" class="figure mx-auto d-block"><div class="figcaption">A newly created repository</div>
+</figure></section><section><h2 class="section-heading" id="step-2-create-a-new-file">Step 2: Create a new file<a class="anchor" aria-label="anchor" href="#step-2-create-a-new-file"></a></h2>
+<hr class="half-width"><p>We can easily add new files from the web interface.</p>
+<p>Create a file, e.g. <code>guacamole.md</code> (the “md” ending
+signals that this is in Markdown format):</p>
+<figure><img src="fig/new-file-buttons.png" alt="Screenshot of the GitHub interface highlighting the buttons for creating a new file" class="figure mx-auto d-block"><div class="figcaption">Buttons for creating a new file</div>
+</figure><p>In the new file you can share your favorite cooking recipe (or
+something else). You can also copy-paste this as a starting point:</p>
+<pre><code>Ingredients:
+- 2 avocados
+- 1 lime
+- 2 tsp salt
+
+Instructions:
+- cut and mash avocados
+- chop onion
+- squeeze lime
+- add salt
+- and mix well</code></pre>
+<figure><img src="fig/new-file-editor.png" alt="Screenshot of the GitHub web editor with recipe content entered" class="figure mx-auto d-block"><div class="figcaption">The new file editor</div>
+</figure><p>Then add a commit message and commit (save):</p>
+<figure><img src="fig/new-file-commit.png" alt="Screenshot of the GitHub commit form for a new file" class="figure mx-auto d-block"><div class="figcaption">Committing a new file</div>
+</figure><div id="discussion-good-commit-messages" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="discussion-good-commit-messages" class="callout-inner">
+<h3 class="callout-title">Discussion: Good commit messages</h3>
+<div class="callout-content">
+<ul><li>What has changed is more useful than which file has changed</li>
+<li>Sometimes we forget to document <em>why</em> something was
+changed</li>
+<li>Many projects start out as projects “just for me” and end up to be
+successful projects that are developed by 50 people over decades.</li>
+<li>Write commit messages in English that will be understood 15 years
+from now by someone else than you.</li>
+<li><a href="https://fatbusinessman.com/2019/my-favourite-git-commit" class="external-link">“My
+favourite Git commit”</a></li>
+<li><a href="https://who-t.blogspot.com/2009/12/on-commit-messages.html" class="external-link">“On
+commit messages”</a></li>
+<li><a href="https://chris.beams.io/posts/git-commit/" class="external-link">“How to Write a
+Git Commit Message”</a></li>
+</ul></div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="step-3-modify-a-file">Step 3: Modify a file<a class="anchor" aria-label="anchor" href="#step-3-modify-a-file"></a></h2>
+<hr class="half-width"><p>We can also easily modify files from the web.</p>
+<p>Now improve the recipe by adding an ingredient or an instruction
+step:</p>
+<ul><li>Click on the file.</li>
+<li>Click the “pen” icon on top right (“edit this file”).</li>
+</ul><p>Make an improvement, write a commit message, commit:</p>
+<figure><img src="fig/edit-file-preview.png" alt="Screenshot of the GitHub file editor showing a diff preview" class="figure mx-auto d-block"><div class="figcaption">Editing a file with a preview of the
+change</div>
+</figure><p>Once you have done that, browse your commits:</p>
+<figure><img src="fig/commits-browse.png" alt="Screenshot of the GitHub commits list" class="figure mx-auto d-block"><div class="figcaption">Browsing commits</div>
+</figure><p>In this example, the commit history looked like:</p>
+<figure><img src="fig/commits-example.png" alt="Screenshot of an example commit history with several commits" class="figure mx-auto d-block"><div class="figcaption">Example commit history</div>
+</figure><p>In this episode, we saw how we could do basic file management from
+the web. It’s not the best for making lots of new content, but it’s
+pretty convenient for quick edits. We will now see more advanced ways to
+do the same things - you can always check back on the web to see the
+effect.</p>
+</section><section><h2 class="section-heading" id="markdown">Markdown<a class="anchor" aria-label="anchor" href="#markdown"></a></h2>
+<hr class="half-width"><p>Markdown is a lightweight markup language for creating formatted text
+using a plain-text editor. John Gruber and Aaron Swartz created Markdown
+in 2004 (<a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Wikipedia</a>).</p>
+<p>To practice using Markdown, and seeing how it is formatted, open up a
+<a href="https://codimd.carpentries.org/new" class="external-link">new CodiMD document</a> in
+your browser.</p>
+<p>By default, the document will open in rendered view, but click on the
+middle split pane icon in the top left to show the Markdown and rendered
+views side-by-side.</p>
+<figure><img src="fig/codimd_edit.png" alt="Screenshot of CodiMD showing the Markdown source and rendered preview side by side" class="figure mx-auto d-block"><div class="figcaption">The CodiMD split-pane editor</div>
+</figure><p>Now using the CodiMD interface, we will learn the following Markdown
+equivalents:</p>
+<ul><li>Headers</li>
+<li>Bold</li>
+<li>Italics</li>
+<li>Bullets</li>
+<li>Ordered Lists</li>
+<li>Images</li>
+<li>Links</li>
+</ul><div id="exercise-practice-markdown" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-practice-markdown" class="callout-inner">
+<h3 class="callout-title">Exercise: Practice Markdown</h3>
+<div class="callout-content">
+<p>Use as many of the Markdown skills you just learned to edit either
+the README.md or guacamole.md files.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>You can create, edit, and commit files directly from the GitHub web
+interface.</li>
+<li>Good commit messages explain <em>what</em> changed and
+<em>why</em>.</li>
+<li>Markdown is a lightweight formatting language used throughout
+GitHub.</li>
+</ul></div>
+</div>
+</div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></div> <!-- / div.lesson-content -->
+ -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="issues-and-pull-requests.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -388,7 +535,7 @@ any links that you are not going to use.
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/" class="external-link">Cite</a>
+        <a href="citation.html">Cite</a>
         | <a href="mailto:triznam@si.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -418,8 +565,8 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/github-without-command-line/creating-using-web.html",
   "identifier": "https://carpentries-incubator.github.io/github-without-command-line/creating-using-web.html",
   "dateCreated": "2026-01-05",
-  "dateModified": "2026-01-14",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-06",
+  "datePublished": "2026-07-06"
 }
 
   </script><script>

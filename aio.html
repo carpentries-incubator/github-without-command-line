@@ -403,7 +403,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-creating-using-web"><p>Content from <a href="creating-using-web.html">Creating repositories using the web interface</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/creating-using-web.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -417,8 +417,10 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Question 1</li>
-<li>Question 2</li>
+<li>How do I create a repository on GitHub?</li>
+<li>How do I record (commit) changes?</li>
+<li>How do I browse changes?</li>
+<li>What repository insights and settings are available?</li>
 </ul>
 </div>
 </div>
@@ -428,23 +430,179 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Objective 1</li>
-<li>Objective 2</li>
+<li>Create a new repository using the GitHub web interface</li>
+<li>Create and edit files directly on GitHub</li>
+<li>Write clear, descriptive commit messages</li>
+<li>Browse a repository’s commit history</li>
+<li>Use Markdown to format text</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="creating-repositories-using-the-web-interface">Creating repositories using the web interface<a class="anchor" aria-label="anchor" href="#creating-repositories-using-the-web-interface"></a>
+<p>We will practice creating a new repository using the web interface,
+committing changes to it, browsing the changes, creating branches, and
+more. This is everything you need to do basic file management, though
+you’ll probably want something faster to use. Still, it can be good for
+quick edits and contributions.</p>
+<section><h2 class="section-heading" id="step-1-create-a-repository-with-a-readme-and-a-license">Step 1: Create a repository with a README and a license<a class="anchor" aria-label="anchor" href="#step-1-create-a-repository-with-a-readme-and-a-license"></a>
 </h2>
 <hr class="half-width">
+<p>You start off by creating a repository from the web. In fact, we
+usually end up doing this from the web, no matter how you do your daily
+work. The important questions are who is the <em>owner</em> and what is
+the <em>name</em> of the repository.</p>
+<p>Make sure that you are <strong>logged into GitHub</strong>.</p>
+<p>To create a repository we either click the green button “New” (top
+left corner):</p>
+<figure><img src="fig/new-top-left.png" alt="Screenshot of the GitHub interface highlighting the green New button in the top left corner" class="figure mx-auto d-block"><div class="figcaption">The green “New” button in the top left corner of
+GitHub</div>
+</figure><p>Or if you see your profile page, there is a “+” menu (top right
+corner):</p>
+<figure><img src="fig/new-top-right.png" alt="Screenshot of the GitHub interface highlighting the plus icon menu in the top right corner" class="figure mx-auto d-block"><div class="figcaption">The “+” menu in the top right corner of
+GitHub</div>
+</figure><p>We then land at the following form. Please fill it out and set
+<strong>Initialize this repository with a README</strong>. Leave “Choose
+a License” as “None” for now — we will cover choosing a license in a
+later episode.</p>
+<figure><img src="fig/form.png" alt="Screenshot of the GitHub new repository creation form" class="figure mx-auto d-block"><div class="figcaption">The GitHub new repository form</div>
+</figure><p>And now we have a repository with a README and LICENSE and one
+commit:</p>
+<figure><img src="fig/created.png" alt="Screenshot of a newly created GitHub repository showing the README and one commit" class="figure mx-auto d-block"><div class="figcaption">A newly created repository</div>
+</figure></section><section><h2 class="section-heading" id="step-2-create-a-new-file">Step 2: Create a new file<a class="anchor" aria-label="anchor" href="#step-2-create-a-new-file"></a>
+</h2>
+<hr class="half-width">
+<p>We can easily add new files from the web interface.</p>
+<p>Create a file, e.g. <code>guacamole.md</code> (the “md” ending
+signals that this is in Markdown format):</p>
+<figure><img src="fig/new-file-buttons.png" alt="Screenshot of the GitHub interface highlighting the buttons for creating a new file" class="figure mx-auto d-block"><div class="figcaption">Buttons for creating a new file</div>
+</figure><p>In the new file you can share your favorite cooking recipe (or
+something else). You can also copy-paste this as a starting point:</p>
+<pre><code>Ingredients:
+- 2 avocados
+- 1 lime
+- 2 tsp salt
+
+Instructions:
+- cut and mash avocados
+- chop onion
+- squeeze lime
+- add salt
+- and mix well</code></pre>
+<figure><img src="fig/new-file-editor.png" alt="Screenshot of the GitHub web editor with recipe content entered" class="figure mx-auto d-block"><div class="figcaption">The new file editor</div>
+</figure><p>Then add a commit message and commit (save):</p>
+<figure><img src="fig/new-file-commit.png" alt="Screenshot of the GitHub commit form for a new file" class="figure mx-auto d-block"><div class="figcaption">Committing a new file</div>
+</figure><div id="discussion-good-commit-messages" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="discussion-good-commit-messages" class="callout-inner">
+<h3 class="callout-title">Discussion: Good commit messages</h3>
+<div class="callout-content">
+<ul>
+<li>What has changed is more useful than which file has changed</li>
+<li>Sometimes we forget to document <em>why</em> something was
+changed</li>
+<li>Many projects start out as projects “just for me” and end up to be
+successful projects that are developed by 50 people over decades.</li>
+<li>Write commit messages in English that will be understood 15 years
+from now by someone else than you.</li>
+<li><a href="https://fatbusinessman.com/2019/my-favourite-git-commit" class="external-link">“My
+favourite Git commit”</a></li>
+<li><a href="https://who-t.blogspot.com/2009/12/on-commit-messages.html" class="external-link">“On
+commit messages”</a></li>
+<li><a href="https://chris.beams.io/posts/git-commit/" class="external-link">“How to Write a
+Git Commit Message”</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="step-3-modify-a-file">Step 3: Modify a file<a class="anchor" aria-label="anchor" href="#step-3-modify-a-file"></a>
+</h2>
+<hr class="half-width">
+<p>We can also easily modify files from the web.</p>
+<p>Now improve the recipe by adding an ingredient or an instruction
+step:</p>
+<ul>
+<li>Click on the file.</li>
+<li>Click the “pen” icon on top right (“edit this file”).</li>
+</ul>
+<p>Make an improvement, write a commit message, commit:</p>
+<figure><img src="fig/edit-file-preview.png" alt="Screenshot of the GitHub file editor showing a diff preview" class="figure mx-auto d-block"><div class="figcaption">Editing a file with a preview of the
+change</div>
+</figure><p>Once you have done that, browse your commits:</p>
+<figure><img src="fig/commits-browse.png" alt="Screenshot of the GitHub commits list" class="figure mx-auto d-block"><div class="figcaption">Browsing commits</div>
+</figure><p>In this example, the commit history looked like:</p>
+<figure><img src="fig/commits-example.png" alt="Screenshot of an example commit history with several commits" class="figure mx-auto d-block"><div class="figcaption">Example commit history</div>
+</figure><p>In this episode, we saw how we could do basic file management from
+the web. It’s not the best for making lots of new content, but it’s
+pretty convenient for quick edits. We will now see more advanced ways to
+do the same things - you can always check back on the web to see the
+effect.</p>
+</section><section><h2 class="section-heading" id="markdown">Markdown<a class="anchor" aria-label="anchor" href="#markdown"></a>
+</h2>
+<hr class="half-width">
+<p>Markdown is a lightweight markup language for creating formatted text
+using a plain-text editor. John Gruber and Aaron Swartz created Markdown
+in 2004 (<a href="https://en.wikipedia.org/wiki/Markdown" class="external-link">Wikipedia</a>).</p>
+<p>To practice using Markdown, and seeing how it is formatted, open up a
+<a href="https://codimd.carpentries.org/new" class="external-link">new CodiMD document</a> in
+your browser.</p>
+<p>By default, the document will open in rendered view, but click on the
+middle split pane icon in the top left to show the Markdown and rendered
+views side-by-side.</p>
+<figure><img src="fig/codimd_edit.png" alt="Screenshot of CodiMD showing the Markdown source and rendered preview side by side" class="figure mx-auto d-block"><div class="figcaption">The CodiMD split-pane editor</div>
+</figure><p>Now using the CodiMD interface, we will learn the following Markdown
+equivalents:</p>
+<ul>
+<li>Headers</li>
+<li>Bold</li>
+<li>Italics</li>
+<li>Bullets</li>
+<li>Ordered Lists</li>
+<li>Images</li>
+<li>Links</li>
+</ul>
+<div id="exercise-practice-markdown" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-practice-markdown" class="callout-inner">
+<h3 class="callout-title">Exercise: Practice Markdown</h3>
+<div class="callout-content">
+<p>Use as many of the Markdown skills you just learned to edit either
+the README.md or guacamole.md files.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>You can create, edit, and commit files directly from the GitHub web
+interface.</li>
+<li>Good commit messages explain <em>what</em> changed and
+<em>why</em>.</li>
+<li>Markdown is a lightweight formatting language used throughout
+GitHub.</li>
+</ul>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-issues-and-pull-requests"><p>Content from <a href="issues-and-pull-requests.html">GitHub Issues and Pull Requests</a></p>
+ -->
+</section></section><section id="aio-issues-and-pull-requests"><p>Content from <a href="issues-and-pull-requests.html">GitHub Issues and Pull Requests</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/issues-and-pull-requests.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -458,8 +616,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Question 1</li>
-<li>Question 2</li>
+<li>How do I submit small changes using pull requests?</li>
+<li>How do I propose and submit larger changes?</li>
+<li>How do I review and discuss changes?</li>
 </ul>
 </div>
 </div>
@@ -469,23 +628,120 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Objective 1</li>
-<li>Objective 2</li>
+<li>File an issue on a repository</li>
+<li>Fork and edit a file on someone else’s repository</li>
+<li>Create a pull request to propose changes</li>
+<li>Review and respond to issues and pull requests</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="github-issues-and-pull-requests">GitHub Issues and Pull Requests<a class="anchor" aria-label="anchor" href="#github-issues-and-pull-requests"></a>
+<p>In this session we will learn how to contribute to repositories
+through the GitHub Issues feature, and then how to suggest changes to a
+public repository by proposing a Pull Request.</p>
+<p>Through both of these processes, we will see how GitHub allows for
+social media-like discussions that then become part of your repository’s
+record.</p>
+<section><h2 class="section-heading" id="step-1-file-an-issue-on-your-own-repository">Step 1: File an issue on your own repository<a class="anchor" aria-label="anchor" href="#step-1-file-an-issue-on-your-own-repository"></a>
 </h2>
 <hr class="half-width">
+<p>Back on your recipe repository from the previous lesson, click on the
+Issues tab (next to Code).</p>
+<p>On your own repositories, Issues are good places to keep track of
+ideas that you intend to implement in the future.</p>
+<p>Click the green “New issue” button to create a new issue.</p>
+<figure><img src="fig/new_issue.jpg" alt="Screenshot of the GitHub new issue form" class="figure mx-auto d-block"><div class="figcaption">The GitHub new issue form</div>
+</figure><p>Add a title and description of an idea that you think would make your
+recipe repository better.</p>
+<p>Notice that you can assign issues to specific people (when you are
+working with a team), and that you can categorize them with labels and
+milestones.</p>
+</section><section><h2 class="section-heading" id="step-2-file-an-issue-on-a-colleagues-repository">Step 2: File an issue on a colleague’s repository<a class="anchor" aria-label="anchor" href="#step-2-file-an-issue-on-a-colleagues-repository"></a>
+</h2>
+<hr class="half-width">
+<p>More commonly, GitHub issues are used for users of a software or
+documentation site to point out bugs or make feature requests.</p>
+<div id="exercise-file-an-issue" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-file-an-issue" class="callout-inner">
+<h3 class="callout-title">Exercise: File an issue</h3>
+<div class="callout-content">
+<ul>
+<li>In the workshop EtherPad, write your name, and add a link to your
+GitHub repository.</li>
+<li>Once all participants have added their repository link, go to the
+repository of the person above you, and add a bug report or feature
+request as a new Issue.</li>
+<li>If someone else has filed an issue in your repository, how were you
+alerted?</li>
+<li>Go find that issue that was filed in your repository, and respond to
+it.</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="step-3-make-a-pull-request">Step 3: Make a pull request<a class="anchor" aria-label="anchor" href="#step-3-make-a-pull-request"></a>
+</h2>
+<hr class="half-width">
+<p>As you can see, it is very easy for strangers on the Internet to
+suggest new features in open source software. However, the developers do
+not always have the bandwidth or ability to make the changes that you
+request. To be a good open source software citizen, you can make those
+changes yourself, and contribute them back to the project.</p>
+<p>On the same repository you are in from the previous exercise (or in
+the instructor’s repository), navigate to either the README.md or
+guacamole.md files, and click on the pencil icon as if you were going to
+edit it.</p>
+<p>What is different about this new screen than when you edited a file
+in your own repository?</p>
+<figure><img src="fig/fork_top.jpg" alt="Screenshot of GitHub prompting to fork a repository before editing a file you do not own" class="figure mx-auto d-block"><div class="figcaption">Editing a file on someone else’s repository
+triggers a fork</div>
+</figure><p>At the bottom, instead of “Commit changes”, there is a button for
+“Propose changes”.</p>
+<figure><img src="fig/fork_bottom.jpg" alt="Screenshot of the GitHub commit form showing a Propose changes button instead of Commit changes" class="figure mx-auto d-block"><div class="figcaption">The “Propose changes” button</div>
+</figure><p>When you click on “Propose changes”, you should see a complicated
+page called “Compare Changes” that shows which files have changed and
+where.</p>
+<figure><img src="fig/compare_changes.jpg" alt="Screenshot of the GitHub Compare Changes page showing a diff of the proposed changes" class="figure mx-auto d-block"><div class="figcaption">The Compare Changes page</div>
+</figure><p>To actually make this suggested change, click on the green “Create
+Pull Request” button.</p>
+<p>Don’t worry – this is only a <em>request</em>. Your colleague will
+still have an opportunity to accept or reject your changes – or start
+another discussion on the merits of your suggestion.</p>
+<p>Now go back to your own repository, and see if a Pull Request has
+come in from someone else in the class. Feel free to respond politely to
+this request in whatever way you feel is appropriate.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Issues are used to track bugs, ideas, and feature requests on a
+repository.</li>
+<li>Editing a file you don’t have write access to automatically creates
+a fork.</li>
+<li>A pull request proposes your changes back to the original
+repository, where the owner can review, discuss, and decide whether to
+accept them.</li>
+</ul>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-gh-desktop-changes"><p>Content from <a href="gh-desktop-changes.html">Making changes with GitHub Desktop</a></p>
+ -->
+</section></section><section id="aio-gh-desktop-changes"><p>Content from <a href="gh-desktop-changes.html">Making changes with GitHub Desktop</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/gh-desktop-changes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -499,8 +755,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Question 1</li>
-<li>Question 2</li>
+<li>How do I clone a repository using GitHub Desktop?</li>
+<li>How do I commit and push changes using GitHub Desktop?</li>
+<li>What happens when conflicting changes are made in two places?</li>
 </ul>
 </div>
 </div>
@@ -510,21 +767,148 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Objective 1</li>
-<li>Objective 2</li>
+<li>Clone an existing repository using GitHub Desktop</li>
+<li>Add, commit, and push changes using GitHub Desktop</li>
+<li>Recognize and resolve a merge conflict</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="making-changes-with-github-desktop">Making changes with GitHub Desktop<a class="anchor" aria-label="anchor" href="#making-changes-with-github-desktop"></a>
+<p><strong>Scenario</strong>: You’ve created a repository through the
+web interface, but now you have multiple files that you would like to
+add. <em>Do you see an easy way to do this in the web
+interface?</em></p>
+<section><h2 class="section-heading" id="step-1-open-github-desktop-and-sign-in">Step 1: Open GitHub Desktop and Sign In<a class="anchor" aria-label="anchor" href="#step-1-open-github-desktop-and-sign-in"></a>
 </h2>
 <hr class="half-width">
+<figure><img src="fig/desktop_welcome.jpg" alt="Screenshot of the GitHub Desktop welcome screen" class="figure mx-auto d-block"><div class="figcaption">The GitHub Desktop welcome screen</div>
+</figure><p>On Windows, go to File &gt; Options. On Mac, go to GitHub Desktop
+&gt; Preferences.</p>
+<p>On the Accounts tab, click the Sign In button to sign in with your
+GitHub credentials in the browser.</p>
+<p>Even though the friendly welcome screen has a big button to clone a
+repository, that welcome screen won’t always be there. The more
+consistent way to do this is to click on File &gt; Clone repository.</p>
+<figure><img src="fig/clone_repo.jpg" alt="Screenshot of the GitHub Desktop Clone a repository window" class="figure mx-auto d-block"><div class="figcaption">The Clone a repository window</div>
+</figure><p>In the Github.com tab, all of your repositories will be listed.
+Scroll until you find the recipes repository you created in the previous
+lesson.</p>
+<p>Now choose a folder on your computer where it makes sense to save
+those files. The default is probably fine, but remember where it is.</p>
+<p>Click Clone to download the files … and all of the associated history
+to your computer.</p>
+</section><section><h2 class="section-heading" id="step-2-add-new-files-to-the-cloned-directory">Step 2: Add new files to the cloned directory<a class="anchor" aria-label="anchor" href="#step-2-add-new-files-to-the-cloned-directory"></a>
+</h2>
+<hr class="half-width">
+<p>Download this zip file from <a href="https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_recipes.zip" class="external-link">https://github.com/MikeTrizna/github-without-command-line/raw/master/data/avocado_recipes.zip</a>,
+and unzip to your Downloads folder (or anywhere else, temporarily). This
+.zip file contains 2 more avocado recipes in Markdown format, but you
+could imagine it containing several more.</p>
+<p>Copy or move the new Markdown files to the directory that you cloned
+from GitHub.</p>
+<div id="exercise" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise" class="callout-inner">
+<h3 class="callout-title">Exercise</h3>
+<div class="callout-content">
+<p><em>How has the Changes tab of the GitHub Desktop window
+updated?</em></p>
+</div>
+</div>
+</div>
+<p>Enter a commit message and description at the bottom of the Changes
+tab, and click the blue Commit button.</p>
+<figure><img src="fig/desktop_changes.jpg" alt="Screenshot of the Changes tab in GitHub Desktop showing new files" class="figure mx-auto d-block"><div class="figcaption">The Changes tab in GitHub Desktop</div>
+</figure><p>Now check out the History tab to see your latest commit.</p>
+<figure><img src="fig/desktop_history.jpg" alt="Screenshot of the History tab in GitHub Desktop showing the latest commit" class="figure mx-auto d-block"><div class="figcaption">The History tab in GitHub Desktop</div>
+</figure><p>Browse to the repository on the GitHub website. <em>Do you see the
+changes you just made?</em></p>
+<p>Even though you have committed the changes to the Git history, they
+have not made their way to the GitHub repository. You will need to click
+to Push changes button in the top right to send them to GitHub. Do that
+now.</p>
+<p>Now the changes should appear on GitHub.</p>
+</section><section><h2 class="section-heading" id="step-3-make-a-conflicting-change">Step 3: Make a conflicting change<a class="anchor" aria-label="anchor" href="#step-3-make-a-conflicting-change"></a>
+</h2>
+<hr class="half-width">
+<p>But what happens if you (or a collaborator) make conflicting changes
+on the GitHub website and on your local copy?</p>
+<p>Make a change in the README.md file of the web version to add
+internal links to the new recipes. On the web add the link to
+avocado_tomato_salad.md first, and then avocado_smoothie.md second.</p>
+<p>It should look like this:</p>
+<pre><code># Avocado Recipes
+A collection of my avocado recipes
+
+* [Salad](avocado_tomato_salad.md)
+* [Smoothie](avocado_smoothie.md)
+* [Guacamole](guacamole.md)</code></pre>
+<p>Commit this change.</p>
+<p>Now open the local copy of your README.md in a text editor, and add
+internal links to avocado_smoothie.md first, and then
+avocado_tomato_salad.md second. Commit the change.</p>
+<p>It should look like this:</p>
+<pre><code># Avocado Recipes
+A collection of my avocado recipes
+
+* [Smoothie](avocado_smoothie.md)
+* [Salad](avocado_tomato_salad.md)
+* [Guacamole](guacamole.md)</code></pre>
+<p>Try to push the changes to GitHub. <em>What new options appear in the
+place of “Push origin”?</em></p>
+<figure><img src="fig/conflicting_changes_options.jpg" alt="Screenshot of GitHub Desktop showing new options in place of Push origin" class="figure mx-auto d-block"><div class="figcaption">New push/pull options appear after a conflicting
+remote change</div>
+</figure><p>Click on “Pull origin”. You should get a warning like this:</p>
+<figure><img src="fig/resolve_conflicts.jpg" alt="Screenshot of GitHub Desktop warning about merge conflicts that need to be resolved" class="figure mx-auto d-block"><div class="figcaption">A warning about resolving conflicts</div>
+</figure><p>Go back to the local copy of the README.md file in a text editor.
+<em>What has changed?</em></p>
+<figure><img src="fig/vscode_conflicts.jpg" alt="Screenshot of a text editor showing Git conflict markers in the README file" class="figure mx-auto d-block"><div class="figcaption">Conflict markers shown in a text editor</div>
+</figure><p>Now remove the conflicting text lines, and try pushing to GitHub
+again.</p>
+<div id="resolving-conflicts" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="resolving-conflicts" class="callout-inner">
+<h3 class="callout-title">Resolving conflicts</h3>
+<div class="callout-content">
+<p>Running into a git conflict is scary. If you feel like you are
+digging a deeper hole as you try to resolve the conflict (and the
+changes you are trying to make are minor), you can always remove the
+local copy of the repository and clone it from GitHub again from
+scratch.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>GitHub Desktop can clone, commit, and push changes without using the
+command line.</li>
+<li>Changes committed locally are not visible on GitHub until they are
+pushed.</li>
+<li>A conflict happens when the same lines of a file are changed in two
+places; Git needs your help to decide which version to keep.</li>
+</ul>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-vscode-changes"><p>Content from <a href="vscode-changes.html">Making changes with VSCode</a></p>
+ -->
+</section></section><section id="aio-vscode-changes"><p>Content from <a href="vscode-changes.html">Making changes with VSCode</a></p>
 <hr>
 <p>Last updated on 2026-01-14 |
 
@@ -567,7 +951,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-websites"><p>Content from <a href="websites.html">Hosting websites on GitHub Pages</a></p>
 <hr>
-<p>Last updated on 2026-01-14 |
+<p>Last updated on 2026-07-06 |
 
         <a href="https://github.com/carpentries-incubator/github-without-command-line/edit/main/episodes/websites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -581,8 +965,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Question 1</li>
-<li>Question 2</li>
+<li>How do I serve a website using GitHub?</li>
 </ul>
 </div>
 </div>
@@ -592,21 +975,103 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Objective 1</li>
-<li>Objective 2</li>
+<li>Enable GitHub Pages for a repository</li>
+<li>Watch GitHub build and deploy a page using GitHub Actions</li>
+<li>View the resulting website</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="hosting-websites-on-github-pages">Hosting websites on GitHub Pages<a class="anchor" aria-label="anchor" href="#hosting-websites-on-github-pages"></a>
+<p>You can host your personal homepage or group webpage or project
+website on GitHub using <a href="https://pages.github.com/" class="external-link">GitHub
+Pages</a>.</p>
+<p><a href="https://about.gitlab.com/features/pages/" class="external-link">GitLab</a> and <a href="https://confluence.atlassian.com/bitbucket/publishing-a-website-on-bitbucket-cloud-221449776.html" class="external-link">Bitbucket</a>
+also offer a very similar solution.</p>
+<p>Unless you need user authentication or a sophisticated database
+behind your website, <a href="https://pages.github.com/" class="external-link">GitHub
+Pages</a> can be a very nice alternative to running your own web
+servers.</p>
+<section><h2 class="section-heading" id="step-0-add-links-to-your-recipes-in-readme-md">Step 0: Add links to your recipes in README.md<a class="anchor" aria-label="anchor" href="#step-0-add-links-to-your-recipes-in-readme-md"></a>
 </h2>
 <hr class="half-width">
+<p><em>(This is from Step 3 of <a href="gh-desktop-changes.html">Making
+changes with GitHub Desktop</a>, so you may have already done
+this)</em></p>
+<p>Go back to your initial recipes repository, and edit your README.md
+file so that you have links to your separate recipe markdown files.</p>
+<p>Here is sample text to include:</p>
+<pre><code># Avocado Recipes
+A collection of my avocado recipes
+
+* [Smoothie](avocado_smoothie.md)
+* [Guacamole](guacamole.md)
+* [Salad](avocado_tomato_salad.md)
+</code></pre>
+<p>Commit these changes.</p>
+</section><section><h2 class="section-heading" id="step-1-tell-github-to-make-your-pages">Step 1: Tell GitHub to make your pages<a class="anchor" aria-label="anchor" href="#step-1-tell-github-to-make-your-pages"></a>
+</h2>
+<hr class="half-width">
+<p>We need to tell GitHub how to make your repository into a
+website.</p>
+<p>Click on the Settings gear icon up top, and then click on the Pages
+section on the left side panel.</p>
+<figure><img src="fig/settings_pages.jpg" alt="Screenshot showing the GitHub Settings Pages section" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Settings Page
+section</div>
+</figure><p>Click on the dropdown under Branch, and select “main” to tell GitHub
+to build a webpage from the “main” branch. Then make sure that “/root”
+is selected in the new dropdown that will populate. Click Save to make
+the web page build.</p>
+<figure><img src="fig/settings_main_root.jpg" alt="Screenshot showing the GitHub Pages settings with the main branch and root folder selected" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Settings Page
+section, with main branch and root selected</div>
+</figure></section><section><h2 class="section-heading" id="step-2-watch-github-build-your-page-live">Step 2: Watch GitHub build your page live<a class="anchor" aria-label="anchor" href="#step-2-watch-github-build-your-page-live"></a>
+</h2>
+<hr class="half-width">
+<p>Right after clicking Save, GitHub will start building your page using
+GitHub Actions (we could do a whole extra workshop on GitHub
+Actions).</p>
+<p>Click on the Actions icon on the top menu to see that a “workflow”
+has been triggered called “pages build and deployment”.</p>
+<figure><img src="fig/github_actions_workflows.jpg" alt="Screenshot of the GitHub Actions page showing a pages build and deployment workflow that was just triggered" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing the GitHub Actions page
+with a deployment that has just been triggered</div>
+</figure><p>If you clicked on the Actions tab fast enough, the circle next to the
+workflow name should be brown or yellow.</p>
+<p>Click on the “pages build and deployment” link. If the build was
+successful, all parts of the workflow should show a green circle. And
+most importantly, the “deploy” portion should have a link to your new
+website!</p>
+<figure><img src="fig/github_actions_built.jpg" alt="Screenshot of a completed GitHub Actions workflow with a link to the deployed site" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing details of a GitHub Actions
+workflow</div>
+</figure><p>Click on that link (it should follow the pattern
+<code>https://[your username].github.io/recipes</code>). You should see
+a pretty basic webpage, but it’s completely built from the contents of
+your GitHub repository!</p>
+<figure><img src="fig/webpage.jpg" alt="Screenshot of a simple deployed webpage with links to recipes" class="figure mx-auto d-block"><div class="figcaption">A screenshot showing a simple webpage with links
+to recipes</div>
+</figure><div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>GitHub Pages can turn the contents of a repository into a live
+website.</li>
+<li>Enabling Pages triggers a GitHub Actions workflow that builds and
+deploys the site.</li>
+<li>The deployed site’s URL follows the pattern
+<code>https://[your username].github.io/[repository name]</code>.</li>
+</ul>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section>
+ -->
+</section></section>
 </div>
     </main>
 </div>
@@ -625,7 +1090,7 @@ any links that you are not going to use.
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/carpentries-incubator/github-without-command-line/" class="external-link">Source</a></p>
         <p>
-        <a href="https://github.com/carpentries-incubator/github-without-command-line/blob/main/" class="external-link">Cite</a>
+        <a href="citation.html">Cite</a>
         | <a href="mailto:triznam@si.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -656,8 +1121,8 @@ any links that you are not going to use.
   "url": "https://carpentries-incubator.github.io/github-without-command-line/aio.html",
   "identifier": "https://carpentries-incubator.github.io/github-without-command-line/aio.html",
   "dateCreated": "2026-01-05",
-  "dateModified": "2026-06-30",
-  "datePublished": "2026-06-30"
+  "dateModified": "2026-07-06",
+  "datePublished": "2026-07-06"
 }
 
   </script><script>
